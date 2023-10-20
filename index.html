@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+    </script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container navbar-expand-lg flex-row">
+        <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid d-flex justify-content-between">
+                <!--Toggle Button-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <!--Text Logo-->
+                <a class="navbar-brand fs-4 fw-semibold ms-4" href="#">E-Commerce</a>
+                <!--Side navigation, Menu and Search-->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">E-Commerce</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <form class="d-flex" role="search">
+                            <input class="form-control form-control-lg me-2 " type="search" placeholder="Search product..." aria-label="Search">
+                            <button class="btn btn-light btn-md" type="submit"><i class="bi bi-search"></i></button>
+                        </form>
+                        <ul class="navbar-nav justify-content-center align-items-center fs-5 ms-5 pe-3 gap-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Create an Account and Cart-->
+                <div class="offcanvas-sm ">
+                    <ul class="navbar-nav justify-content-center fs-4 fw-semibold">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Create an Account?</a>
+                        </li>
+                        <div class="offcanvas-sm ms-5 me-4">
+                            <button type="button" class="btn btn-light btn-lg position-relative">
+                                <i class="bi bi-cart"></i> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary"> 0 <span class="visually-hidden">Cart</span></span>
+                              </button>
+                        </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card bg-light text-black" style="width: 40%;">
+            <div class="card-body">
+                <h2 class="card-header text-center fs-2 fw-semibold">Sign In</h2>
+                <form>
+                    <div class="mb-4 mt-5">
+                        <label for="username" class="form-label fs-5">Email</label>
+                        <input type="text" class="form-control form-control-lg" id="username" placeholder="Enter your email...">
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="form-label fs-5">Password</label>
+                        <input type="password" class="form-control form-control-lg" id="password" placeholder="Enter your password...">
+                    </div>
+                    <div class="form-check fs-5">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Remember me
+                    </label>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <a href="">
+                            <p class="text-light text-decoration-underline">Forgot password?</p>
+                        </a>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="" class="text-decoration-none text-light " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <p class="text-light text-decoration-underline">Don't have an account yet? Register</a>
+                        </p>
+                        </a>
+
+                    </div>
+                    <div class="d-flex justify-content-end align-items-end mt-4 gap-3">
+                        <button type="submit" class="btn btn-light btn-lg">Sign In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Registration Form Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Create an Account</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="inputFirstName">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="inputLastName">
+                        </div>
+                        <div class="col-12">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Enter your Email...">
+                        </div>
+                        <div class="col-12">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Enter your Password...">
+                        </div>
+                        <div class="col-12">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Enter your Password...">
+                        </div>
+                        <div class="col-12">
+                            <div class="input-group">
+                                <span class="input-group-text">Address</span>
+                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">State</label>
+                            <select id="inputState" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputZip" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    By registering, you agree to our Terms and Conditions.
+                            </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-light">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
