@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
     </script>
@@ -31,7 +31,7 @@
                     <div class="offcanvas-body">
                         <form class="d-flex" role="search">
                             <input class="form-control form-control-lg me-2 " type="search" placeholder="Search product..." aria-label="Search">
-                            <button class="btn btn-light btn-md" type="submit"><i class="bi bi-search"></i></button>
+                            <button class="btn btn-dark btn-md" type="submit"><i class="bi bi-search text-light"></i></button>
                         </form>
                         <ul class="navbar-nav justify-content-center align-items-center fs-5 ms-5 pe-3 gap-3">
                             <li class="nav-item">
@@ -56,7 +56,7 @@
                             <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Create an Account?</a>
                         </li>
                         <div class="offcanvas-sm ms-5 me-4">
-                            <button type="button" class="btn btn-light btn-lg position-relative">
+                            <button type="button" class="btn btn-dark btn-lg position-relative">
                                 <i class="bi bi-cart"></i> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary"> 0 <span class="visually-hidden">Cart</span></span>
                               </button>
                         </div>
@@ -64,9 +64,108 @@
             </div>
         </nav>
     </div>
+    <div class="container d-flex justify-content-center align-items-center vh-100"><div class="container" id="productCard" >
+        <div class="card-group gap-5">
+            <!--Product 1-->
+            <div class="card bg-light text-dark">
+                <img src="img/1.jpg" class="card-img-top img-fluid" alt="Product Image">
+                <div class="card-body bg-light text-dark ">
+                    <h5 class="card-title fw-semibold">Abstract Bliss</h5>
+                    <p class="card-text lh-sm text-justify">Elevate your style with our Abstract Bliss shirt. This trendy piece features a captivating abstract design that effortlessly combines art and fashion. Crafted from high-quality materials, it offers both comfort and aesthetics.
+                        Make a statement wherever you go with this unique and artistic shirt.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-light text-dark fs-6 border-top border-bottom">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="fw-semibold ">Price: $20.00</span>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-light btn-sm ">
+                                        <input type="radio" name="size" id="sizeSmall" autocomplete="off"> S
+                                    </label>
+                                <label class="btn btn-light btn-sm ">
+                                        <input type="radio" name="size" id="sizeMedium" autocomplete="off"> M
+                                    </label>
+                                <label class="btn btn-light btn-sm ">
+                                        <input type="radio" name="size" id="sizeLarge" autocomplete="off"> L
+                                    </label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="card-body d-flex justify-content-end gap-2">
+                    <button type="button" class="btn btn-dark"><i class="bi bi-bag-plus"></i> Add to Cart</button>
+                    <button type="button" class="btn btn-secondary"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+            <!--Product 2-->
+            <div class="card bg-light text-dark">
+                <img src="img/2.jpg" class="card-img-top img-fluid" alt="Product Image">
+                <div class="card-body bg-light text-dark">
+                    <h5 class="card-title fw-semibold">Modern Line Tee</h5>
+                    <p class="card-text lh-sm text-justify ">The Modern Line Tee is a must-have addition to your wardrobe. Its sleek and modern design is perfect for those who appreciate contemporary fashion. With a comfortable fit and stylish appeal, this tee is a versatile choice for any
+                        occasion. Discover the beauty of simplicity with the Modern Line Tee.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-light text-dark fs-6 border-top border-bottom">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="fw-semibold">Price: $25.00</span>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-light btn-sm ">
+                                        <input type="radio" name="size" id="sizeSmall" autocomplete="off"> S
+                                    </label>
+                                <label class="btn btn-light btn-sm ">
+                                        <input type="radio" name="size" id="sizeMedium" autocomplete="off"> M
+                                    </label>
+                                <label class="btn btn-light btn-sm ">
+                                        <input type="radio" name="size" id="sizeLarge" autocomplete="off"> L
+                                    </label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="card-body d-flex justify-content-end gap-2">
+                    <button type="button" class="btn btn-dark"><i class="bi bi-bag-plus"></i> Add to Cart</button>
+                    <button type="button" class="btn btn-secondary"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+            <!--Product 3-->
+            <div class="card bg-light text-dark ">
+                <img src="img/3.jpg" class="img-fluid" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title fw-semibold">Chic Graphic Tee</h5>
+                    <p class="card-text lh-sm text-justify">Embrace your inner artist with our Chic Graphic Tee. Its sophisticated graphic design adds a touch of elegance to your casual style. Crafted with precision, this tee offers a comfortable fit that complements its chic look. Elevate
+                        your fashion game with the Chic Graphic Tee.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-light text-dark fs-6 border-top border-bottom">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="fw-semibold">Price: $30.00</span>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-light btn-sm ">
+                                        <input type="radio" name="size" id="sizeSmall" autocomplete="off"> S
+                                    </label>
+                                <label class="btn btn-light btn-sm ">
+                                        <input type="radio" name="size" id="sizeMedium" autocomplete="off"> M
+                                    </label>
+                                <label class="btn btn-light btn-sm ">
+                                        <input type="radio" name="size" id="sizeLarge" autocomplete="off"> L
+                                    </label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="card-body d-flex justify-content-end gap-2">
+                    <button type="button" class="btn btn-dark"><i class="bi bi-bag-plus"></i> Add to Cart</button>
+                    <button type="button" class="btn btn-secondary"><i class="bi bi-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+    
+            
 
-    <div class="container d-flex justify-content-center align-items-center vh-100">
-        <div class="card bg-light text-black" style="width: 40%;">
+      <!--  <div class="card bg-light text-black" style="width: 40%;">
             <div class="card-body">
                 <h2 class="card-header text-center fs-2 fw-semibold">Sign In</h2>
                 <form>
@@ -86,23 +185,24 @@
                     </div>
                     <div class="mt-4 text-center">
                         <a href="">
-                            <p class="text-light text-decoration-underline">Forgot password?</p>
+                            <p class="text-dark text-decoration-underline">Forgot password?</p>
                         </a>
                     </div>
                     <div class="text-center mt-4">
-                        <a href="" class="text-decoration-none text-light " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                            <p class="text-light text-decoration-underline">Don't have an account yet? Register</a>
+                        <a href="" class="text-decoration-none text-dark " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <p class="text-dark text-decoration-underline">Don't have an account yet? Register</a>
                         </p>
                         </a>
 
                     </div>
                     <div class="d-flex justify-content-end align-items-end mt-4 gap-3">
-                        <button type="submit" class="btn btn-light btn-lg">Sign In</button>
+                        <button type="submit" class="btn btn-dark btn-lg">Sign In</button>
                     </div>
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
+
     <!-- Registration Form Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
