@@ -55,7 +55,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Create an Account?</a>
                         </li>
-                        <div class="offcanvas-sm ms-5 me-4">
+                        <div class="offcanvas-sm ms-5 me-4"> 
+                <button type="button" class="btn btn-dark btn-lg" id="signInButton" data-bs-toggle="modal" data-bs-target="#addProduct"> <i class="bi bi-bag-plus-fill"></i></button>
+
                             <button type="button" class="btn btn-dark btn-lg position-relative">
                                 <i class="bi bi-cart"></i> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary"> 0 <span class="visually-hidden">Cart</span></span>
                               </button>
@@ -67,7 +69,6 @@
     <div class="container d-flex justify-content-center align-items-center vh-100 ">
         <div class="container h-75"> 
             <div class="d-flex justify-content-end align-items-end mb-4">
-                <button type="button" class="btn btn-light btn-lg" id="signInButton" data-bs-toggle="modal" data-bs-target="#addProduct">Add Product <i class="bi bi-bag-plus-fill"></i></button>
             </div>
             <div class="card-group gap-5">
                 <!--Product 1-->
@@ -218,40 +219,35 @@
                             <label for="confirmPassword" class="form-label">Confirm Password</label>
                             <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Enter your Password...">
                         </div>
+                        <div class="col-12 ">
+                            <label class="form-label">Gender</label>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Male" value="Male">
+                                        <label class="form-check-label" for="inlineRadio1">Male</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Female" value="Female">
+                                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-12">
                             <div class="input-group">
                                 <span class="input-group-text">Address</span>
-                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                                <textarea id="Address" class="form-control" aria-label="With textarea"></textarea>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="inputCity" class="form-label">City</label>
-                            <input type="text" class="form-control" id="inputCity">
-                        </div>
-                        <div class="col-md-4">
-                            <label for="inputState" class="form-label">State</label>
-                            <select id="inputState" class="form-select">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                          </select>
-                        </div>
-                        <div class="col-md-2">
-                            <label for="inputZip" class="form-label">Zip</label>
-                            <input type="text" class="form-control" id="inputZip">
-                        </div>
-                        <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    By registering, you agree to our Terms and Conditions.
-                            </label>
-                            </div>
-                        </div>
+                        </div>                       
+                                           
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-light">Sign Up</button>
+                    <button type="button" class="btn btn-light" id="btnSignUp">Sign Up</button>
                 </div>
             </div>
         </div>
@@ -294,5 +290,6 @@
                         </div>
                 </div>
             </div>
+            <script src="index.js"></script>
 </body>
 </html>
